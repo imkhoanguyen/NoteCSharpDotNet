@@ -15,6 +15,7 @@ public IActionResult Create()
 }
 
 <div>#View</div>
+/*
 <div class="form-floating py-1 col-12">
    <select asp-for="@Model.VillaId" asp-items="@ViewData["VillaList"] as IEnumerable<SelectListItem>"
        class="form-select border shadow">
@@ -23,3 +24,4 @@ public IActionResult Create()
     <label asp-for="VillaId" class="ms-2"></label>
     <span asp-validation-for="VillaId" class="text-danger"></span>
 </div>
+*/
