@@ -2,7 +2,7 @@
 
 <h2>View Data</h2>
 
-#Controller
+<div>#Controller</div>
 public IActionResult Create()
 {
     IEnumerable<SelectListItem> list = _db.Villas.ToList().Select(x=> new SelectListItem
@@ -14,7 +14,7 @@ public IActionResult Create()
     return View();
 }
 
-#View
+<div>#View</div>
 <div class="form-floating py-1 col-12">
    <select asp-for="@Model.VillaId" asp-items="@ViewData["VillaList"] as IEnumerable<SelectListItem>"
        class="form-select border shadow">
