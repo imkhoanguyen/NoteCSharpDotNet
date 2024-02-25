@@ -48,3 +48,11 @@ public IActionResult Create()
     <label asp-for="VillaId" class="ms-2"></label>
     <span asp-validation-for="VillaId" class="text-danger"></span>
 </div>
+
+#####View Bag###### Select in LINQ
+-Trả về một obj
+Find: query theo khóa chính 
+FristOrDefault
+-Trả về một list
+Where: thêm điều kiện  query vào
+ToList()
