@@ -56,3 +56,37 @@ FristOrDefault
 -Trả về một list
 Where: thêm điều kiện  query vào
 ToList()
+
+======================================================================================================
+
+#####Repository Partern & UnitOfWork###### 
+Step
+1. Create Interface (ex: IVillaRepository)
+2. Implement Interface (ex: VillaRepository)
+3. Add Dependencies in Program.cs
+4. VillaRepository in Action (Controller, IVillaRepository)
+5. Generic Repository (Create IRepository ex: public Interface IRepository<T> where T : class {})
+6. Implement Interface (Create Repository ex: public class Repository<T> : IRepository<T> where T : class {internal DbSet<T> dbSet; dbSet = _db.Set<T>();}
+   - IVillaRepository : IRepository<Villa>
+   - VillaRepository : Repository<Villa>, IVillaRepository
+7. Implement UnitOfWork (Tại sao lại implement? => Ko implement thì phải add dependencies cho từng repo, project Supermarket là một ví dụ)
+   - Create IUnitOfWork
+    ex: 
+    public interface IUnitOfWork
+    {
+        IVillaRepository Villa { get; }
+    }
+   - Create UnitOfWork 
+    ex:
+    public class UnitOfWork : IUnitOfWork
+    {
+        private readonly ApplicationDbContext _db;
+        public IVillaRepository Villa {get;private set;}
+        public UnitOfWork(ApplicationDbContext db)
+        {
+            _db = db;
+            Villa = new VillaRepository(_db);
+        }
+    }
+8. Edit Dependencies
+9. UnitOfWork in Action (Controller, IUnitOfWork)
