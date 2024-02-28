@@ -90,3 +90,9 @@ Step
     }
 8. Edit Dependencies
 9. UnitOfWork in Action (Controller, IUnitOfWork)
+
+======================================================================================================
+#####NotMapped###### 
+Không tạo thêm cột trong CSDL
+[NotMapped]
+public IFormFile? Image { get; set; }
