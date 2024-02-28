@@ -96,3 +96,9 @@ Step
 Không tạo thêm cột trong CSDL
 [NotMapped]
 public IFormFile? Image { get; set; }
+
+======================================================================================================
+#####File###### 
+khi làm việc với file thì form create phải thêm cái này vào mới post được enctype="multipart/form-data"
+để có thể làm việc và truy cập vào mục wwwroot ta dùng private readonly IWebHostEnvironment _webHostEnvironment;
+
