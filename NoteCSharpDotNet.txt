@@ -102,3 +102,9 @@ public IFormFile? Image { get; set; }
 khi làm việc với file thì form create phải thêm cái này vào mới post được enctype="multipart/form-data"
 để có thể làm việc và truy cập vào mục wwwroot ta dùng private readonly IWebHostEnvironment _webHostEnvironment;
 
+======================================================================================================
+#####PartialView###### 
+Khi partialview có chứa model ví dụ @model Villa
+thì để import partialview thì ta sẽ làm như sau: 
+<partial name="_VillaDetail" model="villa"/>
+vd: Section 10 - Villa Details Modal (Clean Architecture)
