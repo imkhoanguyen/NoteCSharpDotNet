@@ -108,3 +108,8 @@ Khi partialview có chứa model ví dụ @model Villa
 thì để import partialview thì ta sẽ làm như sau: 
 <partial name="_VillaDetail" model="villa"/>
 vd: Section 10 - Villa Details Modal (Clean Architecture)
+
+======================================================================================================
+#####View gọi Controllerw######
+Nếu view gọi 1 function trong controller mà function đó có tham số thì để truyền tham số vào function ta dùng
+asp-route-tenthamso (ex: Update(int villaId) gọi phải có asp-route-villaId="")
